@@ -1,4 +1,4 @@
-package pl.newoncequiz.newoncequiz
+package pl.nn.hack4good
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
