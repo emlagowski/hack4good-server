@@ -216,15 +216,15 @@ data class Response(
             )
             val rankings = listOf(
                 Ranking(
-                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 220) ,
-                    before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 32, 4500) ,
-                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 33, 4678) ,
-                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 34, 4900)
+                    leader = RankingPerson("https://randomuser.me/api/portraits/women/42.jpg", 1, 220) ,
+                    before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/60.jpg", 13, 4500) ,
+                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/74.jpg", 14, 4678) ,
+                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/76.jpg", 15, 4900)
                 ), Ranking (
-                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 2000) ,
-                    before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 119, 10101) ,
-                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 120, 12000) ,
-                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 121, 13000)
+                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/71.jpg", 1, 2000) ,
+                    before = RankingPerson("https://randomuser.me/api/portraits/women/39.jpg", 100, 10101) ,
+                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/74.jpg", 101, 12000) ,
+                    after = RankingPerson("https://randomuser.me/api/portraits/women/48.jpg", 102, 13000)
                 )
             )
             return Response("Niko Bellic", footprints, challenges, chart, rankings)
