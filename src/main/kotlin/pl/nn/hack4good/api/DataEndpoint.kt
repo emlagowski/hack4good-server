@@ -113,8 +113,8 @@ data class Response(
             val rankings = listOf(
                 Ranking(
                    leader = RankingPerson("https://randomuser.me/api/portraits/women/43.jpg", 1, 220) ,
-                   before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 13, 4500) ,
-                   me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/72.jpg", 14, 4678) ,
+                   before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/61.jpg", 13, 4500) ,
+                   me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 14, 4678) ,
                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/77.jpg", 15, 4900)
                 ), Ranking (
                     leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/72.jpg", 1, 2000) ,
