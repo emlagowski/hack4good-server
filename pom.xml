@@ -21,7 +21,7 @@
     </dependencyManagement>
     <groupId>pl.nn</groupId>
     <artifactId>hack4good</artifactId>
-    <version>0.5</version>
+    <version>0.6</version>
     <name>hack4good</name>
     <description>hack4good</description>
     <properties>

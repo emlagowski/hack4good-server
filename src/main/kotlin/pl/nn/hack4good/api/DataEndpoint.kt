@@ -138,7 +138,7 @@ data class Response(
                 value = "50"
             ),
             Challenge(
-                name = "Use one display while working on single app",
+                name = "Disable your camera while presenting screen",
                 streakDays = 1,
                 value = "100"
             )
