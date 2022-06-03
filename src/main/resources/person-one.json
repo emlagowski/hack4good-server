@@ -1,0 +1,20 @@
+{
+  "activity": [
+    {
+      "id": 1,
+      "category": "Monitor",
+      "text": "You have turned off secondary monitor!",
+      "secondaryText": "Saved some electricity."
+    }, {
+      "id": 2,
+      "category": "Attachments",
+      "text": "You have sent a link instead of original Attachment!",
+      "secondaryText": "Saved some space."
+    }, {
+      "id": 3,
+      "category": "Attachments",
+      "text": "You have sent a link instead of original Attachment!",
+      "secondaryText": "Saved some space."
+    }
+  ]
+}
