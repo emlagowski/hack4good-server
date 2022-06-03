@@ -11,7 +11,7 @@ services:
       - reverse_proxy
 
   web:
-    image: ghcr.io/emlagowski/hack4good:v0.1
+    image: ghcr.io/emlagowski/hack4good:v0.2
     environment:
       NODE_ENV: PROD
       VIRTUAL_HOST: ${WEB_DOMAINS:-hack4good.pl,www.hack4good.pl}
