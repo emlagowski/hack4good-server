@@ -1,13 +1,17 @@
 package pl.nn.hack4good.api
 
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class DataEndpoint {
 
     @GetMapping("/data")
-    fun get(): Response {
+    fun get(@RequestParam userSwitch: Boolean = false): Response {
+        if (userSwitch) {
+            return Response.anotherMock()
+        }
         return Response.mock()
     }
 }
@@ -20,8 +24,7 @@ data class Response(
 
     companion object {
         fun mock(): Response {
-            val challenges =
-                listOf(Challenge(
+            val challenges = listOf(Challenge(
                     name = "Send files on cloud instead of mail attachments",
                     streakDays = 2,
                     value = "50"
@@ -37,9 +40,7 @@ data class Response(
                     value = "300"
                 )
                 )
-
-            val footprints =
-                listOf(
+            val footprints = listOf(
                     Footprint(
                     category = "Electricity",
                     emitted = "100",
@@ -53,7 +54,7 @@ data class Response(
                     tip = "You can stream music from Spotify instead of YT"
                 ),
                 Footprint(
-                    category = "Bandwith",
+                    category = "Bandwidth",
                     emitted = "50",
                     emittedTrend = Trend.DOWN,
                     tip = "You send a OneDrive link instead of attachment"
@@ -71,9 +72,7 @@ data class Response(
                     tip = "Print double sided"
                 )
             )
-
-            val chart =
-                listOf(
+            val chart = listOf(
                     ChartElement(
                         uv = "1000",
                         pv = "1000",
@@ -110,7 +109,6 @@ data class Response(
                         name = "Saturday"
                     )
                 )
-
             val rankings = listOf(
                 Ranking(
                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 220) ,
@@ -121,10 +119,113 @@ data class Response(
                     leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 2000) ,
                     before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 100, 10101) ,
                     me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 101, 12000) ,
-                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1102, 13000)
+                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 102, 13000)
                 )
             )
+            return Response(footprints, challenges, chart, rankings)
+        }
 
+        fun anotherMock(): Response {
+            val challenges = listOf(
+                Challenge(
+                    name = "Turn of your computer after finishing work",
+                    streakDays = 3,
+                    value = "300"
+                ),
+                Challenge(
+                name = "Send files on cloud instead of mail attachments",
+                streakDays = 2,
+                value = "50"
+            ),
+            Challenge(
+                name = "Use one display while working on single app",
+                streakDays = 1,
+                value = "100"
+            )
+            )
+            val footprints = listOf(
+                Footprint(
+                    category = "Bandwidth",
+                    emitted = "50",
+                    emittedTrend = Trend.DOWN,
+                    tip = "You send a OneDrive link instead of attachment"
+                ),
+                Footprint(
+                    category = "Electricity",
+                    emitted = "100",
+                    emittedTrend = Trend.UP,
+                    tip = "You can turn off your secondary screen"
+                ),
+
+                Footprint(
+                    category = "Storage",
+                    emitted = "10",
+                    emittedTrend = Trend.DOWN,
+                    tip = "Clean up files that you don't use"
+                ),
+                Footprint(
+                    category = "Video",
+                    emitted = "50",
+                    emittedTrend = Trend.UP,
+                    tip = "You can stream music from Spotify instead of YT"
+                ),
+                Footprint(
+                    category = "Printing",
+                    emitted = "80",
+                    emittedTrend = Trend.UP,
+                    tip = "Print double sided"
+                )
+            )
+            val chart = listOf(
+                ChartElement(
+                    uv = "1200",
+                    pv = "1000",
+                    name = "Saturday"
+                ),
+                ChartElement(
+                    uv = "975",
+                    pv = "1200",
+                    name = "Sunday"
+                ),
+                ChartElement(
+                    uv = "950",
+                    pv = "1100",
+                    name = "Monday"
+                ),
+                ChartElement(
+                    uv = "925",
+                    pv = "800",
+                    name = "Tuesday"
+                ),
+                ChartElement(
+                    uv = "890",
+                    pv = "750",
+                    name = "Thursday"
+                ),
+                ChartElement(
+                    uv = "875",
+                    pv = "950",
+                    name = "Friday"
+                ),
+                ChartElement(
+                    uv = "575",
+                    pv = "550",
+                    name = "Saturday"
+                )
+            )
+            val rankings = listOf(
+                Ranking(
+                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 220) ,
+                    before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 32, 4500) ,
+                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 33, 4678) ,
+                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 34, 4900)
+                ), Ranking (
+                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 2000) ,
+                    before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 119, 10101) ,
+                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 120, 12000) ,
+                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 121, 13000)
+                )
+            )
             return Response(footprints, challenges, chart, rankings)
         }
     }
