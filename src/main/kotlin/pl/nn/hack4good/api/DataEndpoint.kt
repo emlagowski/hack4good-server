@@ -14,7 +14,8 @@ class DataEndpoint {
 data class Response(
     val footprints: List<Footprint>,
     val challenges: List<Challenge>,
-    val chart: List<ChartElement>
+    val chart: List<ChartElement>,
+    val rankings: List<Ranking>
     ) {
 
     companion object {
@@ -109,7 +110,22 @@ data class Response(
                         name = "Saturday"
                     )
                 )
-            return Response(footprints, challenges, chart)
+
+            val rankings = listOf(
+                Ranking(
+                   leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 220) ,
+                   before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 13, 4500) ,
+                   me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 14, 4678) ,
+                   after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 15, 4900)
+                ), Ranking (
+                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 2000) ,
+                    before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 100, 10101) ,
+                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 101, 12000) ,
+                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1102, 13000)
+                )
+            )
+
+            return Response(footprints, challenges, chart, rankings)
         }
     }
 }
@@ -133,6 +149,20 @@ data class ChartElement(
     val uv: String,
     val pv: String
 )
+
+data class Ranking(
+    val leader: RankingPerson,
+    val me: RankingPerson,
+    val before: RankingPerson,
+    val after: RankingPerson
+)
+
+data class RankingPerson(
+    val url: String,
+    val value: Int,
+    val position: Int
+)
+
 enum class Trend {
     UP, DOWN, NEUTRAL
 }
