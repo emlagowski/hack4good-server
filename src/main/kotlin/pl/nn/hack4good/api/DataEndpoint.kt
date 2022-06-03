@@ -117,10 +117,10 @@ data class Response(
                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 14, 4678) ,
                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/77.jpg", 15, 4900)
                 ), Ranking (
-                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/72.jpg", 1, 2000) ,
-                    before = RankingPerson("https://randomuser.me/api/portraits/women/40.jpg", 100, 10101) ,
-                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 101, 12000) ,
-                    after = RankingPerson("https://randomuser.me/api/portraits/women/49.jpg", 102, 13000)
+                    leader = RankingPerson("https://image.shutterstock.com/image-vector/creative-logo-letter-b-negative-600w-2146877903.jpg", 1, 2000) ,
+                    before = RankingPerson("https://image.shutterstock.com/image-vector/people-family-together-human-unity-600w-1943011963.jpg", 100, 10101) ,
+                    me = RankingPerson("https://image.shutterstock.com/image-vector/soccer-football-badge-logo-design-600w-1939560655.jpg", 101, 12000) ,
+                    after = RankingPerson("https://image.shutterstock.com/image-vector/team-club-cricket-badge-logo-600w-2022903290.jpg", 102, 13000)
                 )
             )
             return Response("John Kowalski",footprints, challenges, chart, rankings)
@@ -221,10 +221,10 @@ data class Response(
                     me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/74.jpg", 14, 4678) ,
                     after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/76.jpg", 15, 4900)
                 ), Ranking (
-                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/71.jpg", 1, 2000) ,
-                    before = RankingPerson("https://randomuser.me/api/portraits/women/39.jpg", 100, 10101) ,
-                    me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/74.jpg", 101, 12000) ,
-                    after = RankingPerson("https://randomuser.me/api/portraits/women/48.jpg", 102, 13000)
+                    leader = RankingPerson("https://image.shutterstock.com/image-vector/tennis-logo-icon-design-sports-600w-2112380639.jpg", 1, 2000) ,
+                    before = RankingPerson("https://image.shutterstock.com/image-vector/table-tennis-badge-emblem-logo-600w-2153505779.jpg", 100, 10101) ,
+                    me = RankingPerson("https://image.shutterstock.com/image-vector/vector-illustration-sports-club-emblem-600w-464301914.jpg", 101, 12000) ,
+                    after = RankingPerson("https://image.shutterstock.com/image-illustration/bull-mascot-basketball-team-isolated-600w-1390333523.jpg", 102, 13000)
                 )
             )
             return Response("Niko Bellic", footprints, challenges, chart, rankings)
