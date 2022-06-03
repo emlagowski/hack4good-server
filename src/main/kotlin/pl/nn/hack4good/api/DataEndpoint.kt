@@ -31,7 +31,7 @@ data class Response(
                     value = "50"
                 ),
                 Challenge(
-                    name = "Use one display while working on single app",
+                    name = "Don't use external monitor if you don't have to",
                     streakDays = 1,
                     value = "100"
                 ),
