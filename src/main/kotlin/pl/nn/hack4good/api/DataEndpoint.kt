@@ -112,15 +112,15 @@ data class Response(
                 )
             val rankings = listOf(
                 Ranking(
-                   leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 220) ,
+                   leader = RankingPerson("https://randomuser.me/api/portraits/women/43.jpg", 1, 220) ,
                    before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 13, 4500) ,
-                   me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 14, 4678) ,
-                   after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 15, 4900)
+                   me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/72.jpg", 14, 4678) ,
+                   after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/77.jpg", 15, 4900)
                 ), Ranking (
-                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 1, 2000) ,
-                    before = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 100, 10101) ,
+                    leader = RankingPerson("https://randomuser.me/api/portraits/thumb/men/72.jpg", 1, 2000) ,
+                    before = RankingPerson("https://randomuser.me/api/portraits/women/40.jpg", 100, 10101) ,
                     me = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 101, 12000) ,
-                    after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 102, 13000)
+                    after = RankingPerson("https://randomuser.me/api/portraits/women/49.jpg", 102, 13000)
                 )
             )
             return Response("John Kowalski",footprints, challenges, chart, rankings)
