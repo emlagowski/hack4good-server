@@ -16,6 +16,7 @@ class DataEndpoint {
     }
 }
 data class Response(
+    val name: String,
     val footprints: List<Footprint>,
     val challenges: List<Challenge>,
     val chart: List<ChartElement>,
@@ -122,7 +123,7 @@ data class Response(
                     after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 102, 13000)
                 )
             )
-            return Response(footprints, challenges, chart, rankings)
+            return Response("John Kowalski",footprints, challenges, chart, rankings)
         }
 
         fun anotherMock(): Response {
@@ -226,7 +227,7 @@ data class Response(
                     after = RankingPerson("https://randomuser.me/api/portraits/thumb/men/75.jpg", 121, 13000)
                 )
             )
-            return Response(footprints, challenges, chart, rankings)
+            return Response("Niko Bellic", footprints, challenges, chart, rankings)
         }
     }
 }
