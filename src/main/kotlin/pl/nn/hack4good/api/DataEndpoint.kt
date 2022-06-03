@@ -21,53 +21,92 @@ data class Response(
         fun mock(): Response {
             val challenges =
                 listOf(Challenge(
-                    name = "Switch off your second monitor",
-                    streakDays = 3,
+                    name = "Send files on cloud instead of mail attachments",
+                    streakDays = 2,
+                    value = "50"
+                ),
+                Challenge(
+                    name = "Use one display while working on single app",
+                    streakDays = 1,
                     value = "100"
                 ),
-                    Challenge(
-                    name = "Send a link",
+                Challenge(
+                    name = "Turn of your computer after finishing work",
                     streakDays = 3,
-                    value = "100"
+                    value = "300"
                 )
                 )
 
             val footprints =
                 listOf(
                     Footprint(
-                    category = "Attachments",
-                    emitted = "50",
-                    saved = "50",
+                    category = "Electricity",
+                    emitted = "100",
                     emittedTrend = Trend.UP,
-                    savedTrend = Trend.DOWN,
-                    tip = "Use OneDrive instead of sending attachment"
+                    tip = "You can turn off your secondary screen"
                 ),
                 Footprint(
                     category = "Video",
                     emitted = "50",
-                    saved = "50",
                     emittedTrend = Trend.UP,
-                    savedTrend = Trend.DOWN,
-                    tip = "Stop using YT"
+                    tip = "You can stream music from Spotify instead of YT"
+                ),
+                Footprint(
+                    category = "Bandwith",
+                    emitted = "50",
+                    emittedTrend = Trend.DOWN,
+                    tip = "You send a OneDrive link instead of attachment"
+                ),
+                Footprint(
+                    category = "Storage",
+                    emitted = "10",
+                    emittedTrend = Trend.DOWN,
+                    tip = "Clean up files that you don't use"
+                ),
+                Footprint(
+                    category = "Printing",
+                    emitted = "80",
+                    emittedTrend = Trend.UP,
+                    tip = "Print double sided"
                 )
             )
 
             val chart =
                 listOf(
                     ChartElement(
-                        uv = "590",
-                        pv = "800",
-                        name = "Page A"
+                        uv = "1000",
+                        pv = "1000",
+                        name = "Monday"
                     ),
                     ChartElement(
-                        uv = "590",
-                        pv = "800",
-                        name = "Page B"
+                        uv = "975",
+                        pv = "1200",
+                        name = "Tuesday"
                     ),
                     ChartElement(
-                        uv = "590",
+                        uv = "950",
+                        pv = "1100",
+                        name = "Wednesday"
+                    ),
+                    ChartElement(
+                        uv = "925",
                         pv = "800",
-                        name = "Page C"
+                        name = "Thursday"
+                    ),
+                    ChartElement(
+                        uv = "900",
+                        pv = "750",
+                        name = "Friday"
+                    ),
+                    ChartElement(
+                        uv = "875",
+                        pv = "950",
+                        name = "Saturday"
+                    ),
+                    ChartElement(
+                        uv = "675",
+                        pv = "550",
+                        name = "Saturday"
                     )
                 )
             return Response(footprints, challenges, chart)
@@ -79,9 +118,7 @@ data class Response(
 data class Footprint(
     val category: String,
     val emitted: String,
-    val saved: String,
     val emittedTrend: Trend,
-    val savedTrend: Trend,
     val tip: String
     )
 
