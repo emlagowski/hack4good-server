@@ -41,6 +41,14 @@ data class Response(
                     emittedTrend = Trend.UP,
                     savedTrend = Trend.DOWN,
                     tip = "Use OneDrive instead of sending attachment"
+                ),
+                Footprint(
+                    category = "Video",
+                    emitted = "50",
+                    saved = "50",
+                    emittedTrend = Trend.UP,
+                    savedTrend = Trend.DOWN,
+                    tip = "Stop using YT"
                 )
             )
 
